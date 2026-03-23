@@ -17,9 +17,9 @@ export default function App() {
           {/* HEADER */}
           <header className="px-8 pt-7 pb-6 md:px-10">
             <div className="flex items-center justify-between">
-              <h1 className="text-[26px] font-semibold text-[#1b2857] flex items-center gap-1">
+              <h1 className="text-[26px] font-semibold text-[#1b2857] flex items-center gap-3">
                 <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[#dfe4ff] shadow-inner">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#6172ff] online-dot" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#6172ff]" />
                 </span>
                 Enrich Xchange
               </h1>
@@ -35,23 +35,40 @@ export default function App() {
             </div>
 
             {/* TAGLINE */}
-            <div className="mt-4 flex justify-center">
-              <div className="px-6 py-2 rounded-full bg-[linear-gradient(135deg,#e6e9ff,#d7dcff)] text-sm text-[#3f4bd8] shadow-sm">
-                Support and Service Coordination All in One Place
-              </div>
-            </div>
-
+            {/* TOP BADGE */}
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    marginBottom: "14px",
+  }}
+>
+  <div
+    style={{
+      padding: "12px 28px",
+      borderRadius: "999px",
+      backgroundColor: "#eef2ff",
+      color: "#4f46e5",
+      fontSize: "12px",
+      fontWeight: "700",
+      letterSpacing: "-0.2px",
+      boxShadow: "inset 0 0 0 1px rgba(99,102,241,0.06)",
+    }}
+  >
+    Housing • Care • Service Coordination
+  </div>
+</div>
             {/* NAV */}
             <div className="mt-4 flex justify-center">
-              <div className="flex bg-[linear-gradient(135deg,#eef1ff,#e3e7ff)] rounded-full p-1 shadow-sm">
+              <div className="flex bg-[#eef0f7] rounded-full p-1 shadow-sm">
                 {navItems.map((item) => (
                   <button
                     key={item}
                     onClick={() => setActiveTab(item)}
                     className={`px-5 py-2 rounded-full text-[14px] transition ${
                       activeTab === item
-                        ? "bg-[linear-gradient(135deg,#5d6cff,#7a88ff)] text-white shadow font-medium"
-                        : "text-[#5c63a3] text-sm font-medium"
+                        ? "bg-white text-[#2d3b73] shadow text-sm font-medium"
+                        : "text-[#6b7280] text-sm font-medium"
                     }`}
                   >
                     {item}
@@ -60,7 +77,9 @@ export default function App() {
                 <button className="px-4 text-gray-400">…</button>
               </div>
             </div>
-
+<div className="text-center text-sm font-medium text-gray-600 mt-4 mb-6">
+  Looking for support? Start here.
+</div>
             {/* SEARCH BAR */}
             <div className="mt-5 flex justify-center">
               <div className="flex w-full max-w-6xl flex-col overflow-hidden rounded-[22px] border border-gray-200 bg-white shadow md:flex-row md:items-center">
@@ -92,7 +111,7 @@ export default function App() {
                   />
                 </div>
 
-                <div className="px-3 py-3">
+                    <div className="px-3 py-3">
                   <button className="rounded-full bg-indigo-600 px-6 py-3 text-white shadow">
                     Find Help
                   </button>
@@ -100,6 +119,7 @@ export default function App() {
               </div>
             </div>
           </header>
+
 
           {/* MAIN */}
           <main className="px-8 pb-8 md:px-10 md:pb-10">
@@ -111,11 +131,11 @@ export default function App() {
                 style={{ backgroundImage: "url('/bg-hero.jpg')" }}
               />
 
-              {/* New hero overlay */}
-              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(79,70,229,0.85)_0%,rgba(129,140,248,0.60)_42%,rgba(79,70,229,0.35)_100%)]" />
+              {/* Slight stronger overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-700/78 via-purple-400/52 to-transparent" />
 
               {/* Soft right glow */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.22),transparent_60%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_30%,rgba(255,255,255,0.30),transparent_60%)]" />
 
               {/* Content */}
               <div className="relative z-10 px-10 py-14 text-white">
@@ -142,14 +162,14 @@ export default function App() {
             <section className="mt-8 grid md:grid-cols-3 gap-4">
               {/* PROPERTY OWNERS */}
               <div className="p-6 bg-white rounded-2xl shadow">
-                <span className="text-sm bg-[linear-gradient(135deg,#e6e9ff,#d7dcff)] px-3 py-1 rounded-full text-[#3f4bd8]">
+                <span className="text-sm bg-indigo-100 px-3 py-1 rounded-full text-[#4f46e5]">
                   Property Owners
                 </span>
                 <h3 className="mt-4 text-xl font-semibold text-[#2b355d]">
                   Monetize Your Property
                 </h3>
                 <p className="mt-3 text-gray-600">
-                  Support housing programs and earn reliable income while making an impact by partnering with trusted program operators.
+                  List your home or space to support housing programs and earn reliable income.
                 </p>
                 <button className="mt-5 rounded-[14px] bg-[#f5f6fb] px-4 py-2 font-medium text-[#2d3b73] border border-[#e6e8f2]">
                   List Your Property
@@ -158,14 +178,14 @@ export default function App() {
 
               {/* PROVIDERS */}
               <div className="p-6 bg-white rounded-2xl shadow">
-                <span className="text-sm bg-[linear-gradient(135deg,#e6e9ff,#d7dcff)] px-3 py-1 rounded-full text-[#3f4bd8]">
+                <span className="text-sm bg-indigo-100 px-3 py-1 rounded-full text-[#4f46e5]">
                   Licensed Providers
                 </span>
                 <h3 className="mt-4 text-xl font-semibold text-[#2b355d]">
-                  Offer Your Service
+                  Offer Your Services
                 </h3>
                 <p className="mt-3 text-gray-600">
-                  Connect with program operators who need your services and grow your impact while earning extra income.
+                  Connect with operators who need your services and grow your impact.
                 </p>
                 <button className="mt-5 rounded-[14px] bg-indigo-600 px-4 py-2 font-medium text-white">
                   List Your Service
@@ -174,14 +194,14 @@ export default function App() {
 
               {/* OPERATORS */}
               <div className="p-6 bg-white rounded-2xl shadow">
-                <span className="text-sm bg-[linear-gradient(135deg,#e6e9ff,#d7dcff)] px-3 py-1 rounded-full text-[#3f4bd8]">
+                <span className="text-sm bg-indigo-100 px-3 py-1 rounded-full text-[#4f46e5]">
                   Program Operators
                 </span>
                 <h3 className="mt-4 text-xl font-semibold text-[#2b355d]">
-                  Scale Your Program
+                  Scale Your Programs
                 </h3>
                 <p className="mt-3 text-gray-600">
-                  Access housing and providers all in one place to help individuals in need of assistant find placement and aervices faster.
+                  Access housing and providers in one place to help people find placement faster.
                 </p>
                 <button className="mt-5 rounded-[14px] bg-indigo-600 px-4 py-2 font-medium text-white">
                   List Your Program
@@ -194,3 +214,4 @@ export default function App() {
     </div>
   );
 }
+
