@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import SearchBar from "../components/SearchBar";
-import Cards from "../components/Cards";
+import SearchPanel from "../components/SearchPanel";
+import FeatureSection from "../components/FeatureSection";
 
 function Home() {
   return (
@@ -9,7 +9,7 @@ function Home() {
       <Navbar />
       <SearchBar />
       <Hero />
-      <Cards />
+      <FeatureSection />
     </div>
   );
 }
