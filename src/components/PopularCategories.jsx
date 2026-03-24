@@ -12,30 +12,30 @@ export default function PopularCategories() {
         </button>
       </div>
 
-      {/* Grid */}
+      {/* Grid - ONLY 4 CARDS */}
       <div className="grid md:grid-cols-4 gap-4">
         <CategoryCard
           title="Transitional Housing"
           subtitle="Supportive placement options"
-          image="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+          image="https://images.unsplash.com/photo-1560185127-6ed189bf02f4"
         />
 
         <CategoryCard
-          title="Behavioral Programs"
-          subtitle="Structured care and services"
-          image="https://images.unsplash.com/photo-1516549655169-df83a0774514"
+          title="Youth Services"
+          subtitle="Programs for teens and young adults"
+          image="https://images.unsplash.com/photo-1503676260728-1c00da094a0b"
         />
 
         <CategoryCard
-          title="Family Support"
+          title="Veterans Support"
           subtitle="Resources and trusted programs"
-          image="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2"
+          image="https://images.unsplash.com/photo-1511895426328-dc8714191300"
         />
 
         <CategoryCard
-          title="Case Coordination"
-          subtitle="Manage placement and next steps"
-          image="https://images.unsplash.com/photo-1450101499163-c8848c66ca85"
+          title="Elder Care"
+          subtitle="Support and care for older adults"
+          image="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b"
         />
       </div>
     </section>
@@ -44,12 +44,11 @@ export default function PopularCategories() {
 
 function CategoryCard({ title, subtitle, image }) {
   return (
-    <div className="bg-white rounded-2xl p-3 shadow hover:shadow-lg transition duration-300">
+    <div className="bg-white rounded-2xl p-3 shadow hover:shadow-xl transition duration-300">
       <div
         className="h-32 rounded-xl bg-cover bg-center mb-3"
         style={{ backgroundImage: `url(${image})` }}
       />
-
       <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
       <p className="text-gray-500 mt-1">{subtitle}</p>
     </div>

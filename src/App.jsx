@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PopularCategories from "./components/PopularCategories";
 
 export default function EnrichXchangeLanding() {
   const [activeTab, setActiveTab] = useState("Properties");
@@ -116,15 +117,15 @@ export default function EnrichXchangeLanding() {
           </header>
 
           <main className="px-8 pb-8 md:px-10">
-            <section className="relative mt-3 min-h-[455px] overflow-hidden rounded-[30px]">
+            <section className="relative mt-3 min-h-[490px] overflow-hidden rounded-[30px]">
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-700 via-indigo-600/90 to-transparent" />
 
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-34"
+                className="absolute inset-0 bg-cover bg-center opacity-55"
                 style={{ backgroundImage: "url('/bg-hero.jpg')" }}
               />
 
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(255,255,255,0.45),transparent_16%),...]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(255,255,255,0.65),transparent_18%),radial-gradient(circle_at_85%_28%,rgba(255,255,255,0.35),transparent_12%),radial-gradient(circle_at_74%_36%,rgba(255,255,255,0.25),transparent_10%)]" />
 
               <div className="absolute right-0 top-0 h-full w-[58%] bg-white/18 blur-3xl" />
 
@@ -134,9 +135,9 @@ export default function EnrichXchangeLanding() {
                 </span>
 
                 <h2 className="mt-5 max-w-[780px] text-4xl font-semibold leading-[1.18] tracking-[-0.03em] md:text-[62px]">
-                  Find the right support,
+                  Find the Right 
                   <br />
-                  housing, and services faster
+                  Social Support Faster
                 </h2>
 
                 <p className="mt-6 max-w-[620px] text-[18px] leading-8 text-white/88">
@@ -206,8 +207,8 @@ export default function EnrichXchangeLanding() {
                   </h3>
 
                   <p className="mt-2 text-[15px] leading-7 text-gray-500">
-                    Access housing and providers in one place to help individuals in need of assistant find 
-                    support and placement faster.
+                    Access housing and providers in one place to help individuals
+                    in need of assistance find support and placement faster.
                   </p>
 
                   <button className="mt-4 rounded-[14px] bg-indigo-600 px-4 py-2 text-white shadow-sm">
@@ -216,6 +217,8 @@ export default function EnrichXchangeLanding() {
                 </div>
               </div>
             </section>
+
+            <PopularCategories />
           </main>
         </div>
       </div>
